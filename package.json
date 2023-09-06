@@ -1,0 +1,24 @@
+{
+    "name": "gs-proxy-picker",
+    "version": "1.0.0",
+    "description": "Ramdom pick a proxy to use",
+    "main": "dist/index.js",
+    "types": "dist/index.d.ts",
+    "files": [
+        "dist"
+    ],
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1",
+        "build": "tsc",
+        "prepare": "npm run build"
+    },
+    "author": "hungls",
+    "license": "ISC",
+    "devDependencies": {
+        "typescript": "^5.2.2"
+    },
+    "dependencies": {
+        "file-system-cache": "^2.4.4",
+        "node-fetch": "^2.7.0"
+    }
+}
