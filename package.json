@@ -1,6 +1,6 @@
 {
     "name": "gs-proxy-picker",
-    "version": "1.0.0",
+    "version": "1.0.1",
     "description": "Ramdom pick a proxy to use",
     "main": "dist/index.js",
     "types": "dist/index.d.ts",
@@ -12,8 +12,17 @@
         "build": "tsc",
         "prepare": "npm run build"
     },
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/hunglsxx/gs-proxy-picker.git"
+    },
     "author": "hungls",
     "license": "ISC",
+    "bugs": {
+        "url": "https://github.com/hunglsxx/gs-proxy-picker/issues"
+    },
+    "homepage": "https://github.com/hunglsxx/gs-proxy-picker",
+
     "devDependencies": {
         "typescript": "^5.2.2"
     },
