@@ -1,6 +1,7 @@
 import { Cache } from 'file-system-cache';
 import { Adapter } from './adapter';
 import { optstype } from './adapters/_base';
+import * as path from 'path';
 
 export class ProxyPicker {
 
@@ -24,7 +25,7 @@ export class ProxyPicker {
         this.filePath = options.filePath || '';
 
         this.cache = new Cache({
-            basePath: "./.proxies",
+            basePath: `${path.resolve(__dirname, '.proxies')}`,
             ns: `${this.adapter}`,
             hash: "sha1",
             ttl: this.cacheTTL
