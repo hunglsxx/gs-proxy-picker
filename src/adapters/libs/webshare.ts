@@ -6,11 +6,13 @@ export class webshare implements proxyadapter {
     public APIEndpoint: string;
     public listCount: number;
     public APIKey: string;
+    public mode: string;
 
     constructor(options: optstype) {
         this.APIEndpoint = options.APIEndpoint || '';
         this.listCount = options.listCount || 10;
-        this.APIKey = options.APIKey || ''
+        this.APIKey = options.APIKey || '';
+        this.mode = options.mode || 'direct';
     }
 
     public async getProxyList() {
@@ -18,7 +20,7 @@ export class webshare implements proxyadapter {
         if (this.APIEndpoint == '' || this.APIKey == '') return data;
 
         const url = new URL(this.APIEndpoint);
-        url.searchParams.append('mode', 'direct');
+        url.searchParams.append('mode', `${this.mode}`);
         url.searchParams.append('page_size', `${this.listCount}`);
         url.searchParams.append('valid', 'true');
 
