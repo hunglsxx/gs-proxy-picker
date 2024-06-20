@@ -12,6 +12,7 @@ export class ProxyPicker {
     public cacheTTL: number;
     public adapter: string;
     public filePath: string;
+    public mode: string;
 
     public options: optstype;
 
@@ -23,6 +24,7 @@ export class ProxyPicker {
         this.listCount = options.listCount || 10;
         this.cacheTTL = options.cacheTTL || 60;
         this.filePath = options.filePath || '';
+        this.mode = options.mode || '';
 
         this.cache = new Cache({
             basePath: `${path.resolve(__dirname, '.proxies')}`,
@@ -36,7 +38,8 @@ export class ProxyPicker {
             APIKey: this.APIKey,
             adapter: this.adapter,
             listCount: this.listCount,
-            filePath: this.filePath
+            filePath: this.filePath,
+            mode: this.mode
         };
     }
 

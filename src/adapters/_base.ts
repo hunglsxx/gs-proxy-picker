@@ -7,7 +7,8 @@ interface optstype {
     APIKey?: string;
     adapter?: string;
     listCount?: number;
-    filePath?: string
+    filePath?: string;
+    mode?: string;
 }
 
 export { proxyadapter, optstype }
