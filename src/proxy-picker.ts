@@ -81,7 +81,7 @@ export class ProxyPicker {
         if (value) return value;
 
         let alls = await this.getAllByAPI();
-        if (alls.length) return alls[0];
+        if (alls.length) return alls[(Math.floor(Math.random() * alls.length))];
 
         return null;
     }
